@@ -1,0 +1,10 @@
+{
+    "name": "SAM",
+    "description": "software mouth",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "sam.html",
+        "default_icon": "sam.png"
+    }
+}
