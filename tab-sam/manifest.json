@@ -10,7 +10,7 @@
     "commands": {
         "talk": {
             "suggested_key": {
-                "default": "F6"
+                "default": "Ctrl+Down"
             },
             "description": "When you press TAB, it reads the current element."
         }
