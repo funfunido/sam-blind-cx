@@ -8,9 +8,9 @@
         "default_icon": "favicon.png"
     },
     "commands": {
-        "talk" : {
+        "talk": {
             "suggested_key": {
-                "default": "Tab"
+                "default": "F6"
             },
             "description": "When you press TAB, it reads the current element."
         }
