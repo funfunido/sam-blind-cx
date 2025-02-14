@@ -7,6 +7,14 @@
         "default_popup": "sam.html",
         "default_icon": "favicon.png"
     },
+    "commands": {
+        "talk" : {
+            "suggested_key": {
+                "default": "Tab"
+            },
+            "description": "When you press TAB, it reads the current element."
+        }
+    },
     "permissions": ["activeTab"],
     "background": {
         "service_worker": "sam.js"
