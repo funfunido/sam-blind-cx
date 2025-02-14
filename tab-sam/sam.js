@@ -1,4 +1,4 @@
-const samjs = require("./samjs")
+import {samjs} from './samjs';
 
 let sam = new samjs.SamJs();
 
