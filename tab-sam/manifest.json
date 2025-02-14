@@ -7,7 +7,7 @@
         "default_popup": "sam.html",
         "default_icon": "favicon.png"
     },
-
+    "permissions": ["activeTab"],
     "background": {
         "service_worker": "sam.js"
     }
