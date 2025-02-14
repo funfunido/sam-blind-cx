@@ -1,6 +1,6 @@
 {
-    "name": "SAM",
-    "description": "software mouth",
+    "name": "Tab Sam",
+    "description": "When you press TAB, it reads the current element.",
     "version": "1.0",
     "manifest_version": 3,
     "action": {
