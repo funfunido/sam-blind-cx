@@ -6,5 +6,9 @@
     "action": {
         "default_popup": "sam.html",
         "default_icon": "favicon.png"
+    },
+
+    "background": {
+        "service_worker": "sam.js"
     }
 }
