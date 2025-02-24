@@ -16,6 +16,14 @@
         }
     },
     "permissions": ["activeTab", "scripting"],
+    "content_scripts": [
+    {
+      "js": ["sam.js"],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
     "background": {
         "service_worker": "sam.js",
         "type": "module"
