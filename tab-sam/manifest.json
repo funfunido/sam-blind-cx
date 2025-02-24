@@ -1,6 +1,6 @@
 {
     "name": "Tab Sam",
-    "description": "When you press TAB, it reads the current element.",
+    "description": "When you press TAB, it reads the current element. Useful for blind people.",
     "version": "1.0",
     "manifest_version": 3,
     "action": {
