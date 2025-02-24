@@ -23,9 +23,5 @@
         "<all_urls>"
       ]
     }
-  ],
-    "background": {
-        "service_worker": "sam.js",
-        "type": "module"
-    }
+  ]
 }
