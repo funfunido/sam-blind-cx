@@ -17,7 +17,6 @@
     },
     "permissions": ["activeTab", "scripting"],
     "background": {
-        "scripts": ["sam.js"],
-        "persistent": true
+        "service_worker": "sam.js"
     }
 }
