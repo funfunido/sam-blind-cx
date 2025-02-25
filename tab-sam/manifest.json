@@ -16,12 +16,11 @@
         }
     },
     "permissions": ["activeTab", "scripting"],
-    "content_scripts": [
+    "background":
     {
-      "js": ["sam.js"],
-      "matches": [
-        "<all_urls>"
-      ]
+    "scripts": ["sam.js"],
+    "persistent": true
+    },
     }
   ]
 }
