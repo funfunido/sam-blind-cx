@@ -16,11 +16,8 @@
         }
     },
     "permissions": ["activeTab", "scripting"],
-    "background":
-    {
-    "scripts": ["sam.js"],
-    "persistent": true
-    },
+    "background": {
+        "scripts": ["sam.js"],
+        "persistent": true
     }
-  ]
 }
