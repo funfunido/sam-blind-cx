@@ -1,6 +1,6 @@
-import {samjs} from './samjs';
+///import {samjs} from './samjs';
 
-let sam = new samjs.SamJs();
+///let sam = new samjs.SamJs();
 
 chrome.commands.onCommand.addListener(function (command) {
    console.log("it works")
