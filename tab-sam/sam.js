@@ -1,4 +1,4 @@
-import {samjs} from './samjs';
+import {samjs} from './samjs.js';
 
 let sam = new samjs.SamJs();
 
