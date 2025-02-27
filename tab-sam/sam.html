@@ -12,3 +12,53 @@
     <script src="popup.js"></script>
 </body>
 </html>
+<!--{
+  "manifest_version": 3,
+  "name": "Command Listener Extension",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "toggle-feature": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "Toggle some feature"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ]
+}
+  // background.js
+chrome.commands.onCommand.addListener((command) => {
+  if (command === "toggle-feature") {
+    // Send a message to the content script to perform an action
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      chrome.scripting.executeScript({
+        target: { tabId: tabs[0].id },
+        func: toggleFeatureInContentScript
+      });
+    });
+  }
+});
+
+function toggleFeatureInContentScript() {
+  // This function will be executed in the content script's context
+  chrome.runtime.sendMessage({ action: "toggleFeature" });
+}
+  // content.js
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.action === "toggleFeature") {
+    // Perform some action on the page
+    console.log("Feature toggled!");
+    // For example, toggle a class or manipulate the DOM here
+  }
+});-->
