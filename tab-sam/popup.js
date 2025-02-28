@@ -1,2 +1,2 @@
-var samstarter = new Audio('/startingsam.wav');
+var samstarter = new Audio('/samstarter.wav');
 samstarter.play();
