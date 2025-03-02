@@ -1,7 +1,45 @@
 const firstPart = "https://sam.seofernando.com/speak?text="
 const secondPart = "&mouth=100&throat=140&speed=50&pitch=50"
 
-chrome.commands.onCommand.addListener(function (command) {
+chrome.runtime.onInstalled.addListener(function() {
+  
+    chrome.tabs.create({
+      url: 'https://sam-cx-starter-page.vercel.app',
+      active: true
+    });
+  
+    return false;
+  });
+
+
+
+  chrome.commands.onCommand.addListener(async (command) => {
+    if (command === "talk") {
+        // Retrieve the action badge to check if the extension is 'ON' or 'OFF'
+        const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
+        const tab = tabs[0];
+        const prevState = await chrome.action.getBadgeText({ tabId: tab.id });
+        
+        // Next state will always be the opposite
+        const nextState = prevState === 'ON' ? 'OFF' : 'ON';
+
+        // Set the action badge to the next state
+        await chrome.action.setBadgeText({
+            tabId: tab.id,
+            text: nextState,
+        });
+
+        if (nextState === "ON") {
+            // Insert the CSS file when the user turns the extension on
+            await chrome.scripting.executeScript({
+                files: ["injectsam.js"],
+                target: { tabId: tab.id },
+            });
+        }
+    }
+});
+
+/*chrome.commands.onCommand.addListener(function (command) {
     console.log("Got Command: " + command)
      if (command === "talk") {
          let activeEle = document.activeElement;
@@ -45,7 +83,7 @@ function FetchThing(apiUrl) {
     }
 });
 }
-})
+})*/
 
 
 
