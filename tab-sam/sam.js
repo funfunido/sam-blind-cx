@@ -1,3 +1,6 @@
+import { SamJs } from "./scripts/samjs.js";
+
+let sam = new SamJs();
 const firstPart = "https://sam.seofernando.com/speak?text="
 const secondPart = "&mouth=100&throat=140&speed=50&pitch=50"
 
@@ -15,6 +18,8 @@ chrome.runtime.onInstalled.addListener(function() {
 
   chrome.commands.onCommand.addListener(async (command) => {
     if (command === "talk") {
+        console.log("boom")
+        sam.speak('Hello, my name is S.A.M.');
         // Retrieve the action badge to check if the extension is 'ON' or 'OFF'
         const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
         const tab = tabs[0];
