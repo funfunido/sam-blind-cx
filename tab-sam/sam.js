@@ -1,6 +1,6 @@
-import { SamJs } from "./scripts/samjs.js";
+//import { SamJs } from "./scripts/samjs.js";
 
-let sam = new SamJs();
+//let sam = new SamJs();
 const firstPart = "https://sam.seofernando.com/speak?text="
 const secondPart = "&mouth=100&throat=140&speed=50&pitch=50"
 
