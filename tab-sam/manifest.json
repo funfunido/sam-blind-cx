@@ -35,12 +35,4 @@
         "service_worker": "sam.js",
         "type": "module"
     }
-     /*"content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["sam.js"]
-    }
-  ] 
-  you can add the "activeTab permission back in if u need"  
-  */
 }
